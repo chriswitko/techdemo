@@ -1,0 +1,22 @@
+<div id="search">
+  <div class="ask valid" id="search-links">
+    <form action="/search" method="get">
+      <table width="100%">
+        <tr>
+          <td>
+            <input name="q" type="text" id="question" autocomplete="off" placeholder="Search for..." value="<?= q ?>" tabindex="1">
+          </td>
+          <td>
+            <input type="submit" value="Search" tabindex="3">
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td><p>Powered by</p></td>
+          <td><p><a href="https://algolia.com" target="_blank"><img class="algolia-logo"src="/images/algolia_logo_bg-white.svg" /></a></p></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<? extend('layout.html') -?>
+
+<div id="bottom" style="padding: 0px;background:white">
+  <div class="inner" style="width:100%;padding: 20px 33px 5px;margin-bottom: 0;">
+    <div id="questions" style="margin-bottom: 0;padding-bottom: 0">
+      <? include partials/search.html ?>
+
+      <h3 style="margin-bottom: 25px">Search results for <span>"<?= q ?>"</span></h3>
+
+      <div class="follows">
+        <ul class="questions js-questions">
+          <? links.forEach(function(link) { ?>
+            <? include partials/link.html ?>
+          <? }) ?>
+          <? if (links.length >= 50) { ?>
+            <li class="question">
+              <p class="q"><a href="<? if (category) {?>/<?= category ?><? } ?>/page/<?= page ?>">More</a></p>
+            </li>
+          <? } else { ?>
+            <li class="question">
+              <p class="q <? if (!user) { ?>js-submit modal-activate<? } ?>" data-modal="ask-question"><a href="/submit">Submit a link</a></p>
+            </li>
+          <? } ?>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>

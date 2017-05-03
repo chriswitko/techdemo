@@ -1,0 +1,96 @@
+<div class="modal large-modal modal-ask-question">
+<div class="large-modal-content modal-content">
+<div class="title-bar">
+  <h3>Sign in / Sign up</h3>
+  <div class="close close-text">Done</div>
+</div>
+
+<div class="close close-icon"></div>
+<h5>Join the Techspeller community</h5>
+<p>Sign up for Techspeller. Discover great links from tech world.</p>
+<div class="modal-cta">
+  <ul class="sign-in-buttons">
+    <li><a href="/auth/twitter" class="btn  btn--twitter">Sign in with Twitter</a></li>
+    <li><a href="/auth/facebook" class="btn btn--facebook">Sign in with Facebook</a></li>
+  </ul>
+  <span class="disclaimer">We'll never post to Twitter or Facebook without your permission.</span>
+</div>
+</div>
+</div>
+
+<? if (user) { ?>
+<div class="modal mini-modal modal-account-settings"> 
+<div class="modal-body">
+  <div class="title-bar">
+    <h3>Account</h3>
+    <div class="close close-text">Done</div>
+  </div>
+
+  <div class="modal-heading">
+      <h5><?= user.displayName ?></h5>
+      <div class="close close-icon"></div>
+  </div>
+  <div class="modal-content">
+    
+    <ul class="actions">
+      <li class="link-account-settings hover"><a href="/submit">Submit a link</a></li>
+      <li class="link-logout hover"><a href="/logout">Log out</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+<? } ?>
+
+<div class="modal mini-modal modal-create-account">
+<div class="modal-body">
+<div class="title-bar">
+  <h3>Sign in / Sign up</h3>
+  <div class="close close-text">Done</div>
+</div>
+
+<div class="modal-heading">
+  <h5>Join the Techspeller community</h5>
+  <div class="close close-icon"></div>
+</div>
+<div class="modal-content">
+  <p>One place for all the best links from tech world — share your links with the community.</p>
+
+  <ul class="sign-in-buttons">
+    <li><a href="/auth/twitter" class="btn btn--twitter">Sign in with Twitter</a></li>
+    <li><a href="/auth/facebook" class="btn btn--facebook">Sign in with Facebook</a></li>
+  </ul>
+
+  <span class="disclaimer">We'll never post to Twitter or Facebook without your permission.</span>
+</div>
+</div>
+</div>
+
+<div class="modal mini-modal modal-follow">
+<div class="modal-body">
+<div class="title-bar">
+  <h3>Sign in / Sign up</h3>
+  <div class="close close-text">Done</div>
+</div>
+<div class="modal-heading">
+  <div class="circle">
+    <svg width="24px" height="24px" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="follow-arrow-only" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Fill-3" fill="#000000 " points="16.6196 15 7.3816 15 12.0016 7" />
+      </g>
+    </svg>
+  </div>
+  <h5>Sign in to Follow</h5>
+  <div class="close close-icon"></div>
+</div>
+<div class="modal-content">
+  <p>Follow this link and more from the community.</p>
+
+  <ul class="sign-in-buttons">
+    <li><a href="/auth/twitter" class="btn  btn--twitter">Sign in with Twitter</a></li>
+    <li><a href="/auth/facebook" class="btn btn--facebook">Sign in with Facebook</a></li>
+  </ul>
+
+  <span class="disclaimer">We'll never post to Twitter or Facebook without your permission.</span>
+</div>
+</div>
+</div>

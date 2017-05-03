@@ -1,0 +1,10 @@
+<div class="inner">
+  <? include subscribe.html ?>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <p>&copy; 2017 <a href="http://chriswitko.com" target="_blank">Chris Witko</a> &middot; <a href="https://twitter.com/chris_witko" target="_blank">Twitter</a> &middot; <a href="https://github.com/chriswitko" target="_blank">GitHub</a></p>
+      <p><? if (user && user.isSubscribed) { ?><a href="/unsubscribe">Unsubscribe</a> &middot; <? } ?><a href="https://twitter.com/intent/tweet?url=<?= host ?>&text=Get all tech news, including Javascript, React, Angular and more on Techspeller.com" target="_blank">Share on Twitter</a> &middot; <a href="<?= host ?>" class="js-facebook-share">Share on Facebook</a></p>
+    </div>
+  </footer>        
+</div>  

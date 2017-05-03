@@ -1,0 +1,32 @@
+<? extend('layout.html') -?>
+
+<div id="bottom" style="padding: 0px;background:white">
+  <div class="inner" style="width:100%;padding: 20px 33px 5px;margin-bottom: 0;">
+    <div id="questions" style="margin-bottom: 0;padding-bottom: 0">
+      <div class="follows">
+        <ul class="questions js-questions">
+          <? include partials/link.html ?>
+        </ul>
+        <div id="disqus_thread"></div>          
+      </div>
+      <h3 style="margin-bottom: 25px">Suggested links</h3>
+      <div class="follows">
+        <ul class="questions js-questions">
+          <? links.forEach(function(link) { ?>
+            <? include partials/link.html ?>
+          <? }) ?>
+          <? if (links.length >= 100) { ?>
+            <li class="question">
+              <p class="q"><a href="/<?= category ?>/<?= page ?>">More</a></p>
+            </li>
+          <? } else { ?>
+            <li class="question">
+              <p class="q <? if (!user) { ?>js-submit modal-activate<? } ?>" data-modal="ask-question"><a href="/submit?category=<?= category ?>">Submit a link</a></p>
+            </li>
+          <? } ?>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

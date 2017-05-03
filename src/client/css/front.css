@@ -1,0 +1,511 @@
+body {
+  overflow-x: hidden;
+}
+
+.siema {
+  float: left;
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.siema img {
+  height: 120px;
+  width: 200px;
+}
+
+.header {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 72px;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding: 0 32px;
+}
+
+.header-left {
+  float: left;
+  padding: 0;
+}
+
+.header-right {
+  float: right;
+  position: absolute;
+  right: 0;
+  padding: 20px 32px;
+  font-size: 0;
+}
+
+.header-right>div {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.header-right>div.answer {
+  vertical-align: top;
+  margin-top: 4px;
+  margin-left: 32px;
+}
+
+.header-right .round a {
+  font-size: 16px;
+  font-family: SuisseIntl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  background: #2C2C9E;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 7px 12px;
+  font-size: 14px;
+  color: #FAFAFA;
+  line-height: 18px;
+}
+
+.header-right .round a:hover {
+  background: #3434B1;
+}
+
+.header-right .answer a {
+  font-size: 16px;
+  color: #000;
+  font-family: SuisseIntl;
+  text-decoration: none;
+  line-height: 20px;
+  display: block;
+}
+
+.header-right .answer a {
+  line-height: 24px;
+}
+
+.header-right #answer-circle {
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+.header-right .round.ask-question a {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000;
+}
+
+.header-right .round.ask-question a:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.header-right .answer:hover a {
+  color: #2C2C9E;
+}
+
+.header-right .answer:hover path {
+  fill: #2C2C9E;
+}
+
+.header-logo {
+  font-family: Copernicus, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+  display: inline-block;
+  line-height: 24px;
+  margin: 24px 0;
+  position: absolute;
+  text-decoration: none;
+}
+
+.header-buttons {
+  float: right;
+  margin: 24px -48px 24px 0;
+}
+
+#home .inner {
+  width: 864px;
+  margin: 0 auto;
+}
+
+#home #main .inner {
+  padding: 48px 48px;
+}
+
+#home #main .intro {
+  margin-bottom: 72px;
+}
+
+#home #main .intro h2.title {
+  font-family: Copernicus, Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 44px;
+  color: #000000;
+  line-height: 55px;
+  margin: 0 0 24px;
+}
+
+#home #main .intro .break {
+  display: block;
+}
+
+#home #main .intro p {
+  font-family: SuisseIntl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  color: #000000;
+  line-height: 32px;
+  margin: 0;
+}
+
+#bottom {
+  background: rgba(0, 0, 0, 0.04);
+  padding-top: 72px;
+}
+
+.boxes {
+  font-size: 0;
+  padding-left: 0;
+  text-align: center;
+  width: 1024px;
+  margin-left: -128px;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.boxes li {
+  display: inline-block;
+  width: 320px;
+  height: auto;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 24px;
+  padding-bottom: 136px;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+}
+
+.boxes li .box-illustration {
+  position: absolute;
+  bottom: -2px;
+  margin-left: -10px;
+}
+
+.boxes li.two {
+  margin: 0 24px;
+}
+
+.boxes li h3 {
+  font-family: Copernicus, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #000000;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.boxes li p {
+  font-family: SuisseIntl, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.boxes li:last-of-type {
+  margin-right: 0;
+}
+
+@font-face {
+  font-family: 'Copernicus';
+  src: url("../fonts/Copernicus-Book.eot");
+  src: url("../fonts/Copernicus-Book.eot#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Copernicus';
+  src: url("../fonts/Copernicus-Bold.eot");
+  src: url("../fonts/Copernicus-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Copernicus';
+  src: url("../fonts/Copernicus-Extrabold.eot");
+  src: url("../fonts/Copernicus-Extrabold.eot#iefix") format("embedded-opentype"), url("../fonts/Copernicus-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url("../fonts/SuisseIntl-Regular-WebS.eot");
+  src: url("../fonts/SuisseIntl-Regular-WebS.eot#iefix") format("embedded-opentype"), url("../fonts/SuisseIntl-Regular-WebS.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url("../fonts/SuisseIntl-RegularItalic-WebS.eot");
+  src: url("../fonts/SuisseIntl-RegularItalic-WebS.eot#iefix") format("embedded-opentype"), url("../fonts/SuisseIntl-RegularItalic-WebS.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url("../fonts/SuisseIntl-Medium-WebS.eot");
+  src: url("../fonts/SuisseIntl-Medium-WebS.eot#iefix") format("embedded-opentype"), url("../fonts/SuisseIntl-Medium-WebS.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url("../fonts/SuisseIntl-SemiBold-WebS.eot");
+  src: url("../fonts/SuisseIntl-SemiBold-WebS.eot#iefix") format("embedded-opentype"), url("../fonts/SuisseIntl-SemiBold-WebS.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url("../fonts/SuisseIntl-Bold-WebS.eot");
+  src: url("../fonts/SuisseIntl-Bold-WebS.eot#iefix") format("embedded-opentype"), url("../fonts/SuisseIntl-Bold-WebS.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1072px) {
+  #bottom {
+    margin-top: 0;
+  }
+
+  .boxes li {
+    border-color: transparent;
+    padding-top: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .boxes li.two {
+    border-right: 2px solid rgba(0, 0, 0, 0.08);
+    border-left: 2px solid rgba(0, 0, 0, 0.08);
+    margin: 0 12px;
+    width: 332px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #bottom {
+    margin-top: 2px;
+  }
+
+  .boxes {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+  }
+
+  .boxes li {
+    width: 100% !important;
+    height: auto;
+    margin: 0 !important;
+    display: block;
+    padding: 48px 336px 48px 0 !important;
+    background-position: bottom right;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+  }
+
+  .boxes li .box-illustration {
+    position: absolute;
+    right: 0;
+    margin-left: 0;
+  }
+
+  .boxes li:first-of-type {
+    padding-top: 0 !important;
+  }
+
+  .boxes li:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .header {
+    padding: 0 48px;
+  }
+
+  .header-right {
+    padding-right: 48px;
+  }
+
+  #home .inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-right .answer a {
+    font-size: 0;
+  }
+
+  .header-right #answer-circle {
+    margin-right: 0;
+  }
+
+  .header {
+    padding: 0 0;
+    margin: 0 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    height: 50px;
+  }
+
+  .header-logo {
+    font-size: 18px;
+    margin: 12px 0;
+  }
+
+  .header-right {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 0;
+  }
+
+  .header-right .round a {
+    padding-left: 0;
+    padding-right: 0;
+    color: #2C2C9E;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .header-right .round a:hover {
+    color: #3434B1;
+  }
+
+  .header-right .round a,  .header-right .round a:hover {
+    background: none;
+  }
+
+  .header-right .ask-question {
+    display: none;
+  }
+
+  #home #main {
+    margin-top: 32px;
+  }
+
+  #home #main .inner {
+    padding: 0 24px;
+  }
+
+  #home #main .intro h2.title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+
+  #home #main .intro .break {
+    display: none;
+  }
+
+  .boxes li {
+    padding: 32px 0 0 !important;
+  }
+
+  .boxes li .box-illustration {
+    position: relative;
+    right: auto;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  #bottom {
+    padding-top: 48px;
+  }
+
+  #home #main #questions {
+    margin-bottom: 72px;
+  }
+
+  #home #main .intro p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #home #main #questions .follows ul.questions li.question .q {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #home #main #questions h3,  #home #main #questions .ask h3 {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    margin: 0 20px;
+  }
+
+  #home #main .inner {
+    padding: 0 20px;
+  }
+
+  .large-modal .large-modal-content {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    margin: 0 16px;
+  }
+
+  #home #main .inner {
+    padding: 0 16px;
+  }
+
+  .large-modal .large-modal-content {
+    padding: 16px;
+  }
+
+  #home .footer {
+    height: auto;
+    text-align: center;
+    padding: 24px 0;
+  }
+
+  #home .footer-left p {
+    line-height: 20px;
+  }
+
+  #home .footer-left,  #home .footer-right {
+    float: none;
+  }
+
+  #home .footer-right .icons {
+    margin: 0 0 16px;
+  }
+}

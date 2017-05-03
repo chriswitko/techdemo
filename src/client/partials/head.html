@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Techspeller – The Tech News Platform</title>
+<meta name="description" content="Techspeller - All the tech news you want to read.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/images/favicon-128.png">
+<meta name="google-site-verification" content="h1J05GMwEg1a6dgkqCp8FYlZWWnxy6w9MMCTeoP5LZc" />
+<meta property="fb:app_id" content="1422866204454575"/>
+<meta property="og:image" content="https://techspeller.com/images/favicon-256.png" />
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">
+<meta name="twitter:image:src" content="https://techspeller.com/images/favicon-256.png" />
+<meta name="twitter:card" content="summary" />
+
+<style>
+  <? include ../css/app.min.css ?>
+  <? include ../css/front.min.css ?>
+</style>
+
+<? if (typeof link == 'object') { ?>
+  <meta property="og:title" content="<?= link.title ?> - Techspeller">
+  <meta property="og:description" content="<?= link.title ?>">
+  <meta property="og:url" content="https://techspeller.com/link/<?= link.slug ?>" />
+  <meta name="twitter:description" content="<?= link.title ?>">
+<? } else if (typeof categoryDetails == 'object') { ?>
+  <meta property="og:title" content="<?= categoryDetails.name ?> - Techspeller – The Tech News Platform">
+  <meta property="og:description" content="Great source of links about <?= categoryDetails.name ?> on Techspeller. All the tech news you want to read.">
+  <meta property="og:url" content="https://techspeller.com/<?= categoryDetails.url ?>" />
+  <meta name="twitter:description" content="Great source of links about tech on Techspeller. All the tech news you want to read.">
+<? } else { ?>
+  <meta property="og:title" content="Techspeller – The Tech News Platform">
+  <meta property="og:description" content="Great source of links about tech on Techspeller. All the tech news you want to read.">
+  <meta property="og:url" content="https://techspeller.com" />
+  <meta name="twitter:description" content="Great source of links about tech on Techspeller. All the tech news you want to read.">
+<? } ?>

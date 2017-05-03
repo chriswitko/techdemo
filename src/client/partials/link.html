@@ -1,0 +1,17 @@
+<li id="q-<?= link._id ?>" class="question <? if (link.voted) {?>selected<? } ?> <? if (user) {?>signedin<? } ?>" data-id="<?= link._id ?>" data-topics="communication ">
+  <div class="follow js-follow" data-modal="follow" data-votes="<?= link.isApproved ?>" data-id="<?= link._id ?>">
+    <div class="circle">
+      <svg width="24px" height="24px" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="follow-arrow-only" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon id="Fill-3" fill="#000000 " points="16.6196 15 7.3816 15 12.0016 7" />
+        </g>
+      </svg>
+    </div>
+  </div>
+  <p class="q">
+    <!--<span class="card-form-label">PROMOTED</span> -->
+    <a href="/go/<?= link.slug ?>" target="_blank"><?= link.title ?></a> &mdash; from <a class="source" href="/<?= category ?>?source=<?= link.source ?>"><?= link.source ?></a>
+    <br/>
+    <span><small>+<?= link.votes ?> <? if (link.votes === 1) { ?>vote<? } else { ?>votes<? } ?> &middot; <a href="/link/<?= link.slug ?>"><small><?= link.ago ?></small></a> &middot; <a href="https://twitter.com/intent/tweet?url=<?= host ?>/link/<?= link.slug ?>&text=<?= encodeURIComponent(link.title) ?>" target="_blank"><small>Share on Twitter</small></a> &middot; <a href="<?= host ?>/link/<?= link.slug ?>" class="js-facebook-share"><small>Share on Facebook</small></a><? if (user && user.isAdmin) { ?> &middot; <a href="#" class="js-delete" data-id="<?= link._id ?>"><small>Delete</small></a><? } ?></small></span>
+  </p>
+</li>

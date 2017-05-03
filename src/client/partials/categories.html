@@ -1,0 +1,16 @@
+<div id="bottom" style="padding: 0;">
+  <div class="inner" style="width:100%;padding: 20px 33px;">
+    <div id="questions" style="padding:0;margin:0;">
+
+      <div class="follows" style="width:100%;margin:0;">
+        <ul class="categories" style="width:100%;margin:0;">
+          <div class="scrollable">
+            <? nav.forEach(function(cat) { ?>
+              <li class="<? if (cat.url === category) { ?>active<? } ?>" data-topic="<?= cat.code ?>" data-selectall=""><a href="/<?= cat.url ?>"><?= cat.name ?></a></li>
+            <? }) ?>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>    

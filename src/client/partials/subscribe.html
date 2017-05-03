@@ -1,0 +1,17 @@
+<? if (!user || (user && !user.isSubscribed)) {?>
+  <div class="intro" style="margin-bottom:30px;margin-top:50px;">
+    <h2 class="title">All the tech news you want to read.</h2>
+    <p>I’ll send you a weekly summary email of all new links, web resources I learn from, job offers and interesting tutorials for developers &amp; designers. Never miss out on learning, subscribe now!</p>
+  </div>
+
+  <div id="questions">
+    <div class="ask valid" id="ask-a-question" style="margin-top:0">
+      <form action="/subscribe" method="post">
+        <input name="email" type="text" id="question" placeholder="Enter your email address" class="ask-question-input" value="<? if (user) {?><? if (user.email) { ?><?= user.email ?><? } ?><? } ?>" tabindex="1" style="background: white">
+        <div class="submit <? if (!user) { ?>js-submit modal-activate<? } ?>" data-modal="ask-question">
+          <input type="submit" value="Subscribe" tabindex="3">
+        </div>
+      </form>
+    </div>
+  </div>
+<? } ?>

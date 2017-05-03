@@ -1,0 +1,34 @@
+<? extend('layout.html') -?>
+
+<div id="bottom" style="padding: 0px;background:white">
+  <div class="inner" style="width:100%;padding: 20px 33px 5px;">
+
+    <div class="intro" style="margin-bottom:30px;margin-top:50px;">
+      <h2 class="title">Submit a link</h2>
+      <p>Add a link you wish to share with Techspeller community. All links require approval. Your link will appear within 15 min from submission.</p>
+    </div>
+
+    <div id="questions">
+      <div class="ask valid" id="ask-a-question" style="margin-top:0">
+        <form action="/submit" method="post" autocomplete="off">
+          <input name="title" type="text" id="title" autocomplete="off" placeholder="Enter title" value="<? if (title) {?><?= title ?><? }?>" class="ask-question-input" value="" tabindex="1" style="background: white">
+          <br />
+          <input name="url" type="text" id="url" autocomplete="off" placeholder="Enter URL" value="<? if (url) {?><?= url ?><? }?>" class="ask-question-input" value="" tabindex="1" style="background: white">
+          <br />
+          <select class="select" name="category">
+            <? categories.forEach(function(category) { ?>
+              <option value="<?= category.code ?>" <? if (suggestCategory.code === category.code) { ?>selected<? } ?>><?= category.name ?></option>
+            <? }) ?>
+          </select>
+          <div class="submit" data-modal="ask-question">
+            <input type="submit" value="Submit" tabindex="3">
+          </div>
+          <p>Get our bookmarklet: <a href="javascript:window.location=%22<?= host ?>/submit?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)">Post to Techspeller</a></p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--<? include partials/intro.html ?>-->

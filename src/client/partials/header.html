@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header-left">
+    <a href="/" class="header-logo">Techspeller</a>
+  </div>
+  <div class="header-right">
+    <? if (!user) { ?>
+      <div class="create-account modal-activate round" data-modal="create-account">
+        <a href="#">Sign in / Sign up</a>
+      </div>
+    <? } else { ?>
+      <? if (user.provider === 'twitter') { ?>
+        <img height="30" height="30" src="https://twitter.com/<?= user.username ?>/profile_image/?size=normal" alt="<?= user.displayName ?>" class="profile-pic modal-activate" data-modal="account-settings">
+      <? } else { ?>
+        <img height="30" height="30" src="https://graph.facebook.com/<?= user.providerId ?>/picture?type=square" alt="<?= user.displayName ?>" class="profile-pic modal-activate" data-modal="account-settings">
+      <? } ?>
+    <? } ?>
+  </div>
+</header>
